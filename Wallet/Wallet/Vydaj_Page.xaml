@@ -1,0 +1,29 @@
+﻿<Page x:Class="Wallet.Vydaj_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wallet"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="350"
+      Title="Vydaj_Page">
+
+    <Grid Background="white" Height="500" Width="350">
+
+        <Label Content="VÝDAJ" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="102,0,99,464" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Název :" FontSize="13" Margin="6,33,282,440" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light"/>
+        <TextBox x:Name="UtracenoZa" Margin="73,36,25,443"/>
+        <Label Content="Cena :" FontSize="13" Margin="6,60,282,413" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light"/>
+        <TextBox x:Name="Vydana_Castka" Margin="73,62,25,417"/>
+        <Calendar Name="Kalendar" Height="Auto" Width="Auto" Margin="83,97,84,237"/>
+        <Label Content="Vyber kategorii :" FontSize="13" Margin="10,272,239,201" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light"/>
+        
+        <ListView x:Name="Kategorie" Margin="51,304,45,50" SelectionChanged="Kategorie_SelectionChanged"/>
+        
+        <Button x:Name="Uloz_Vydaj" Content="ULOŽIT" Margin="185,455,10,10" Click="Uloz_Vydaj_Click"/>
+        <Button x:Name="Back" Content="Zpět" Margin="10,455,185,10" Click="Back_Click"/>
+        
+        <Frame x:Name="FromVydaj"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="Wallet.Kategorie_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wallet"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="350"
+      Title="Kategorie_Page">
+
+    <Grid Background="White" Height="500" Width="350">
+        <Button x:Name="Vytvor_Kategorie" Content="Vytvoření kategorie" Margin="10,10,10,458" Click="Vytvor_Kategorie_Click"/>
+        <Button x:Name="Smaz_Katerogie" Content="Smazání kategorie" Margin="10,116,10,352" Click="Smaz_Katerogie_Click"/>
+
+        <TextBox x:Name="Nova_Kategorie" Margin="10,63,10,402" />
+
+        <ListView x:Name="Zobrazeni_Kategorii" Margin="10,164,10,70" SelectionChanged="Zobrazeni_Kategorii_SelectionChanged"/>
+
+        <Button x:Name="Ulozit" Content="Uložit změny" Margin="185,455,10,10" Click="Ulozit_Click"/>
+        <Button x:Name="Back" Content="Zpět" Margin="10,455,185,10" Click="Back_Click"/>
+        
+        <Frame x:Name="FromCategory"/>
+    </Grid>
+</Page>

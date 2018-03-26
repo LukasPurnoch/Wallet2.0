@@ -1,0 +1,32 @@
+﻿<Page x:Class="Wallet.EditDluhy_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wallet"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="350"
+      Title="EditDluhy_Page">
+
+    <Grid Background="White" Height="500" Width="350">
+
+        <ListView x:Name="listViewDluh" Margin="10,10,10,140" FontFamily="Yu Gothic UI Light" FontSize="14" SelectionChanged="listViewDluh_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Název" DisplayMemberBinding="{Binding Nazev}"/>
+                    <GridViewColumn Header="Začátek" DisplayMemberBinding="{Binding PocatekPujcky}" Width="73"/>
+                    <GridViewColumn Header="Konec" DisplayMemberBinding="{Binding KonecPujcky}" Width="73"/>
+                    <GridViewColumn Header="Sazba" DisplayMemberBinding="{Binding Sazba}"/>
+                    <GridViewColumn Header="Částka" DisplayMemberBinding="{Binding VysePujcky}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <Button x:Name="Ulozit" Content="Uložit změny" Margin="185,455,10,10" Click="Ulozit_Click"/>
+        <Button x:Name="Back" Content="Zpět" Margin="10,455,185,10" Click="Back_Click"/>
+        <Button x:Name="Delete" Content="Smazat záznam" Margin="95,365,100,100" Click="Delete_Click"/>
+
+        <Frame x:Name="FromEditLoan"/>
+
+    </Grid>
+</Page>
